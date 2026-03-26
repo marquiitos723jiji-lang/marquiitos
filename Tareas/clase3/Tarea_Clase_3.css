@@ -1,0 +1,44 @@
+body {
+    background-color: chartreuse;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    width: 300px;
+    border: 2px solid beige;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 15px;
+    padding: 50px 20px;
+    box-shadow: 10px 10px beige;
+
+}
+
+input {
+    border-radius: 15px;
+    box-shadow: 500px;
+}
+
+button {
+    margin: auto;
+    margin-top: 15px;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid yellow;
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+select {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+

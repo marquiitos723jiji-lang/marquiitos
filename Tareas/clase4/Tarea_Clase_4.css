@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+    color: white;
+    padding: 15px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.menu li{
+    cursor: pointer;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+}
+
+.cards1 {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 40px;
+    
+    div {
+        background-color: white;
+        border: 1px solid gray ;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.cards2 {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 40px;
+    
+    div {
+        background-color: white;
+        border: 1px solid gray ;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+.cards3 {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 40px;
+    
+    div {
+        background-color: white;
+        border: 1px solid gray ;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards1 {
+        flex-direction: column;
+    }
+
+    .cards2 {
+        flex-direction: column;
+    }
+
+    .cards3 {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,31 @@
+en justify-content:
+center: centra
+end: al final
+space-between: hace que pongan espaion entre os elementos
+space-arund: lo mismo que space between, solo que tambien pone espacion al rededor.
+space-evenly: lo mismo que los 2 anteriores pero pone el doble de espacio tanto por dentro como al rededor.
+
+
+ACLARACION: Las imagenes nunca deberian tener un "width" fijo en un diseno responsivo:
+
+Ejemplo:
+
+img {
+    width: 100px;
+}
+
+---------------------------
+
+mas bien:
+
+img {
+    width: 100%;
+}
+
+ACLARACION: "margin" o "pading", al poner sus dimensiones por ej: 10px;
+
+margin/pading: 10px; Con un solo "px", estamos ocupando a los 4 lados del margin o pading.
+               
+-------------: 10px 10px; con el primer "px" ocupamos "arriba y "abajo",mientras con el segundo "px" estamos ocupando "izquierda" y "derecha" de los mismos.
+
+-------------: 10px 10px 10px 10px; con el primero "arriba", con el segundo "derecha", con el tercero "abajo" y con el cuarto "izquierda".

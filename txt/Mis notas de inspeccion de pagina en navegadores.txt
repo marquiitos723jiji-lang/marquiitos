@@ -1,0 +1,4 @@
+en "inspecciones" luego en "lighthouse":
+
+A la hora de agregra una imagen a tu pagina, mientras mas  pesada sea, menos performance va a tener la misma, y viceversa.
+recomendado usar extensiones de imagenes: .jpg y .wemp, ya que las .png suelens ser mas pesadas.

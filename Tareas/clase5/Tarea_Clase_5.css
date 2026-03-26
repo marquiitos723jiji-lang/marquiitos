@@ -1,0 +1,161 @@
+body {
+    margin:0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar {
+    background-color: red;
+    padding:15px 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding-right: 50px;
+}
+
+.menu:hover {
+    transform: scale(1.2);
+    a {
+       color: white
+    } 
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    align-items: center;
+    
+    button {
+        border: solid 1px gray;
+        border-radius: 5px;
+        box-shadow: 5px 5px red;
+        padding: 10px;
+        padding-right: -200px;
+        transition: background 1.5s;
+    }
+}
+
+button:hover {
+    cursor: pointer;
+    background-color:greenyellow;
+    transform: scale(1.5) translateY(10px) skewY(20deg) rotate(30deg);
+}
+
+.cards {
+    display: flex;
+    padding: 100px;
+    gap: 140px;
+    text-align: center;
+}
+
+.card {
+    border: solid grey;
+    border-radius: 10px;
+    box-shadow: 10px 10px red;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 30px;
+        font-size: 30px;
+        text-align: center;
+        justify-content: center;      
+    }
+
+    .menu {
+        flex-direction: column;
+        font-size: 17.5px;
+        gap: 5px;     
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        button {
+            margin-top: 20px;
+        }
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 12.5px 25px;
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;      
+    }
+
+    .menu {
+        flex-direction: column;
+        font-size: 15px;
+        gap: 5px;     
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: -20px;
+        button {
+            margin-top: 20px;
+        }
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: -80px;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+button {
+    animation: aparecer 3s;
+}
+
+.cards {
+    animation: aparecer 3s;
+}
+
+.hero {
+    animation: aparecer 3s;
+}
+
+.navbar {
+    animation: aparecer 3s;
+}

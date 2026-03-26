@@ -1,0 +1,39 @@
+Para hacer margin o padding, hacer:
+
+ej:
+
+margin          m-4
+padding         p-4
+
+Para hacer margin-left/right o padding-left/right, hacemos lo sigueinte:
+
+ej:
+
+margin-left               ms-4
+margin-right              me-4
+
+padding-left              ps-4
+padding-right             pe-4
+
+y para aplicarlo en ambos lados hay que hacer: 
+
+ej: 
+
+margin-left               mx-4
+margin-right              mx-4
+
+padding-left              px-4
+padding-right             px-4
+
+Para hacer margin-top/bottom o padding-top/bottom, hay que hacer:
+
+margin-top                mt-4
+margin-bottom             mb-4
+
+padding-top               pt-4
+padding-bottom            pb-4
+
+otras cositas:
+
+img-fluid: hace que la imagen no se desborde, si no que se adapte al ancho.
+

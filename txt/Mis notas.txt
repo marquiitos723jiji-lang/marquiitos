@@ -1,0 +1,2 @@
+en ¨name¨ en un input solo es valido o funcional para htmls que estan vinculadas a un servidor (backend), en el, es donde sera visible el nombre que le pusimos al name
+ej: name= juguetes , y al servidor se le eviara y mostrara como tu le pusiste al name.

@@ -1,0 +1,253 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Tarea_Clase_5.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FocusApp</div>
+        <ul class="menu">
+            <li>
+                <a href="">Descarga</a>
+            </li>
+            <li>
+                <a href="">Que hace la app</a>
+            </li>
+            <li>
+                <a href="">Contacto</a>
+            </li>
+        </ul>         
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text"></div>
+            <h2>Bienvenido a FocusApp</h2>
+            <p>App para organizar tareas y mejorar la productividad</p>
+            <button>Mas informacion</button>           
+    </section>
+
+    <section class="cards">
+        <div class="card0">
+            <h2>Organizacion</h2>
+            <p>Descubre como organizar tus tareas de manera super facil tus ideas</p>
+        </div>
+        <div class="card1">
+            <h2>productividad</h2>
+            <p>Mejora tu productividad de trabajo aqui</p>
+        </div>
+        <div class="card2">
+            <h2>Experiencia</h2>
+            <p>Obten una gran experiecia tanto de UI como de UX con nuestra App</p>
+        </div>
+    </section>
+</body>
+</html>
+
+--------------------------------------------------------------
+
+CSS:
+
+body {
+    margin:0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar {
+    background-color: red;
+    padding:30px 80px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 35px;
+}
+
+.menu {
+    display: flex;
+    padding: 20px;
+    list-style: none;
+    font-size: 20px;
+    gap: 20px;
+    justify-content: end;
+    flex-direction: row;
+}
+
+.menu:hover {
+    transform: scale(1.2);
+    a {
+       color: white
+    }
+        
+    
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+
+    h2 {
+        padding-right: 200px;
+        
+    }
+    p {
+        padding-right: 200px;
+    }
+    button {
+        border: solid 1px gray;
+        border-radius: 5px;
+        box-shadow: 5px 5px red;
+        padding: 10px;
+        padding-right: -200px;
+        transition: background 1.5s;
+    }
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color:greenyellow;
+    transform: scale(1.5) translateY(10px) skewY(20deg) rotate(30deg);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+    gap: 100px;
+    margin-top: 50px;
+
+}
+
+.card0 {
+    border: solid grey;
+    border-radius: 10px;
+    box-shadow: 10px 10px red;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card1 {
+    border: solid grey;
+    border-radius: 10px;
+    box-shadow: 10px 10px red;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card2 {
+    border: solid grey;
+    border-radius: 10px;
+    box-shadow: 10px 10px red;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        padding: 50px;
+        margin: 50px;
+        gap: 40px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px 60px;
+        font-size: 30px;
+        margin: auto;
+        
+        
+    }
+
+    .menu {
+        flex-direction: column;
+        font-size: 17.5px;
+        gap: 5px;
+        padding: 0px 0px;      
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 200px;
+        button {
+            margin-left: -200px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .cards {
+        flex-direction: column;
+        font-size: 12.5px;
+        gap: 30px;
+        padding: 50px;
+        margin: 50px;
+
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 45px;
+        font-size: 20px;
+        margin: auto;
+        
+    }
+
+    .menu {
+        flex-direction: column;
+        font-size: 15px;
+        gap: 5px;
+        padding: 0px 0px;      
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 200px;
+        font-size: 13px;
+        button {
+            font-size: 10px;
+            margin-left: -200px;
+        }
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+button {
+    animation: aparecer 3s;
+}
+
+.cards {
+    animation: aparecer 3s;
+}
+
+.hero {
+    animation: aparecer 3s;
+}
+
+.navbar {
+    animation: aparecer 3s;
+}
+
