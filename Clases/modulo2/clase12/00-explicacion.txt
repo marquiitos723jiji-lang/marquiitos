@@ -1,29 +1,10 @@
-¿Que es un bucle? (o Loop)
-Un bucle es una repeticion, sirve para repetir codigo automaticamente
+Nosotros ya vimos forma de repetir codigo, con los bucles.
 
-Ejemplo:
+Una funcion es un bloque de codigo que podemos reutilizar y volver a llamar cuantas veces y donde queramos
 
-Imaginemos que tenemos que mostrar en consola del 1 al 10
+-Evita repetir codigo
+-Ayuda a reorganizar la logica
+-Le da dinamismo
 
-console.log(1)
-console.log(2)
-console.log(3)
-console.log(4)
-console.log(5)
-console.log(6)
-console.log(7)
-console.log(8)
-console.log(9)
-console.log(10)
+Una funcion es una "maquina" que hace algo cuando la llamas, puede o no ser dinamica
 
-Imaginemos que nos pide ahora del 1 al 10.000.000, es imposible, no?
-
-Ejemplo aplicando bucle:
-
-let repeticiones = 10000000
-
-for (let i = 0; i < repeticiones, i++){
-    console.log(i)
-}
-
-Que es un bucle? <- Nuestro mejor amigo para "repetir" o iterar  codigo
