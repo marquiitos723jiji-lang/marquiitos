@@ -1,0 +1,20 @@
+:root  {
+    padding: 30px;
+}
+
+.contProductos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.contPerfil {
+    display: flex;
+    justify-content: center;
+}
+
+.contDomicilio  {
+    display: flex;
+    justify-content: center;
+}

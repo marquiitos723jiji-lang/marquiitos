@@ -1,0 +1,11 @@
+1) Instalar React/Vite de manera interna en un proyecto de React (que no tiene react/vite instalado realmente)
+
+En la raiz del proyecto poner:
+
+npm install
+
+2) para ejecutarlo:
+
+npm run dev
+
+
