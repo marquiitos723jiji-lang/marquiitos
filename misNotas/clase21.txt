@@ -1,0 +1,5 @@
+Que es el onChange?
+
+Es un  evento que ocurre  en los inputs, que es cuando ocurre un cambio en el valor que  contiene.
+
+(e.target.value) => el "e" es el evento, el "target" es que etiqueta lanzo el evento de cambio, el "value" es el valor que esta escrito dentro de esa etiqueta(lo que esta escrito en el input)

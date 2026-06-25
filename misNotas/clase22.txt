@@ -1,0 +1,25 @@
+"Axios" es una herramienta para el cosnumo de APIS externas, que es miucho mas moderna que esta integrada que es "fetch"
+
+El catch es nuestra promesa si no se logra cumlior  la promesa.
+
+------------------------------------------------------------------------------------
+
+filter:
+
+El toLowerCase() convierte todo el texto a letras minúsculas para que la búsqueda no dependa de cómo esté escrito el nombre.
+
+
+El método .includes() verifica si un texto o una palabra se encuentra dentro de otro texto, devolviendo como resultado true (verdadero) o false (falso).
+
+¿Cómo funciona en tu código?
+
+En tu línea de código, actúa como un buscador de coincidencias parciales:
+
+Evalúa si el texto de la busqueda está metido adentro de usuario.name.
+
+Ejemplo: Si el nombre del usuario es "alejandro" y tu búsqueda es "ale", .includes() devuelve true porque "ale" forma parte de "alejandro".
+Si la búsqueda fuera "juan", devolvería false y ese usuario quedaría fuera del resultado.
+
+Características claveBusca en cualquier posición: Encuentra la coincidencia si está al principio, al medio o al final del texto.
+
+Es exacto: Da falso si hay diferencias de letras, por eso necesitas el .toLowerCase() que vimos antes para que no fallen las mayúsculas.

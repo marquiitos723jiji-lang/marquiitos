@@ -1,0 +1,7 @@
+este medoto de Strings:  tuUpperCase() => lo que hace es pasar a el texto a Mayuscula.
+
+OnSubmit => Es para que cuando se envie el formulario, ejecute algo.
+
+preventDefault() => evita  el comportamiento  por defecto del evento.
+
+                    Ej: En el formulario escribo "juan"  , lo envio  (y se me recargo  la  pagina),  quiere decir que: desaparecio el nombre que yo escribi.

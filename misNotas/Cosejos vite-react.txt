@@ -1,11 +1,18 @@
+Como instalamos Vite:
+
+en la terminal:  npm create vite@latest (para la ultima version)
+                 npm create vite@6      (para una version especifica) => en mi caso use la 6.
+
+Como correr un proyecto en vite:
+
+en la carpeta del proyecto en la terminal, poner:
+
+vite => "si no funciona usar:" npm install y luego npm run dev
+
 1) Instalar React/Vite de manera interna en un proyecto de React (que no tiene react/vite instalado realmente)
 
 En la raiz del proyecto poner:
 
 npm install
-
-2) para ejecutarlo:
-
-npm run dev
 
 

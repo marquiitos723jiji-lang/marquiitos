@@ -8,131 +8,185 @@ function App() {
     apellido: "",
     edad: "",
     sexo: "",
-    email: "",
-  })
+    email: ""
+  });
 
   const [error, setError] = useState({
     nombre: "",
     apellido: "",
     edad: "",
     sexo: "",
-    email: "",
+    email: ""
   })
 
-  const [nuevosErrores, setNuevosErrores] = useState({
-    nombre: "",
-    apellido: "",
-    edad: "",
-    sexo: "",
-    email: "",
-  })  
+  const [submittedUsers, setSubmittedUsers] = useState ({
+    datosEnviados: ""
+  })
+
+  const [mensajeError, setMensajeError] = useState({
+    mensajeError: ""
+  })
 
   function validarFormulario() {
     const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*$/;
-    const regexApellido = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]*$/;
     const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     setError({
-      nombre:
-        user.nombre.length == 0 
-          ? "por favor, compelte este campo"
-            : !regexNombre.test(user.nombre)
-            ? "el nombre solo puede contener letras y espacios"
-              : "",
+      nombre: 
+      user.nombre.length == 0
+        ? "Es obligatorio llenar el campo"
+        : !regexNombre.test(user.nombre)
+          ? "El nombre solo puede contener letras y espacios"
+          : "",
 
       apellido:
-        user.apellido.length == 0
-        ? "por favor, complete este campo"
-          : !regexApellido.test(user.apellido)
-          ? "el appellido solo puede tener letras y espacios"
-            : "",
+      user.apellido.length == 0
+        ? "Es obligatorio llenar el campo"
+        : !regexNombre.test(user.apellido)
+          ? "El apellido solo puede contener letras y espacios"
+          : "",
 
       edad:
-        user.edad.length == 0
-        ? "por favor, complete este campo"
-          : "",
-
+      user.edad.length == 0
+        ? "Es obligatorio llenar el campo"
+        : "",
+      
       sexo:
-        user.sexo.length == 0
-        ? "por favor, complete este campo "
-          : "",
+      user.sexo.length == 0
+        ? "Es obligatorio llenar el campo"
+        : "",
 
       email:
-        user.email.length == 0
-        ? "por favor, complete este campo"
-          : !regexEmail.test(user.email)
-          ? "el email debe tener un formato valido"
-            : "",
-    })
+       user.email.length == 0
+        ? "Es obligatorio llenar el campo"
+         : !regexEmail.test(user.email)
+          ? "El email debe tener un formato valido"
+         : ""
+    });
   }
 
-  function manejarSubmit (event) {
+  function handleChange(event) {
+    setUser({
+      ...user,
+      [event.target.name]: [event.target.value]
+    });
+  }
+
+  function manejarSubmit(event) {
     validarFormulario();
+    mostrarDatosEnPantalla();
+    mensajeDeError();
     event.preventDefault();
   }
 
-  function handleChange (event) {
-    setUser({
-      ...user,
-      [event.target.name]: event.target.value,
+  function mostrarDatosEnPantalla (){
+    setSubmittedUsers({
+      datosEnviados:
+       user.nombre.length != 0
+        & error.nombre.length == 0
+         & user.apellido.length != 0
+          & error.apellido.length == 0
+           & user.edad.length != 0
+            & error.edad.length == 0
+             & user.sexo.length != 0
+              & error.sexo.length == 0
+               & user.email.length != 0
+                & error.email.length == 0
+                 ? "Tu Formulario se envio exitosamente " + " Nombre: " + user.nombre + " Apellido: " + user.apellido + " Edad: " + user.edad + " " + " Sexo: " + user.sexo
+                  : ""
     })
-
-    if(error[event.target.name].length !== 0) {
-      validarFormulario();
-    }
   }
 
+  function mensajeDeError(){
+    setMensajeError({
+     mensajeError:
+      error.nombre.length != 0
+       || error.apellido.length != 0
+        || error.edad.length != 0
+         || error.sexo.length != 0
+          || error.email.length != 0
+           ? "!ERROR! Por favor, verifique que todos los campos sean validos o no esten vacios"
+            : ""
+    })      
+  }
+
+  function limpiarFormulario(){
+    setUser({
+      nombre: "",
+      apellido: "",
+      edad: "",
+      sexo: "",
+      email: ""
+    })
+  }
+  
   return (
     <form onSubmit={manejarSubmit}>
       <label>Nombre</label>
-      <input
+      <input 
         type="text"
-        name="nombre"
-        value={user.nombre}
-        onChange={handleChange} 
-        />
+        name="nombre" 
+        value={user.nombre} 
+        onChange={handleChange}
+      />
       {error.nombre.length != 0 ? <label>{error.nombre}</label> : <></>}
       <label>Apellido</label>
       <input
-        type="text"
-        name="apellido"
-        value={user.apellido}
-        onChange={handleChange} 
-        />
-      {error.apellido.length != 0 ? <label>{error.apellido}</label> : <></>}
-      <label>edad</label>
-      <input
-        type="number"
-        name="edad"
-        min= {0}
-        max= {100}
-        value={user.edad}
+        type="text" 
+        name="apellido" 
+        value={user.apellido} 
         onChange={handleChange}
-        />
+      />
+      {error.apellido.length != 0 ? <label>{error.apellido}</label> : <></>}
+      <label>Edad</label>
+      <input
+        type="number" 
+        name="edad"
+        min={10}
+        max={100}
+        value={user.edad} 
+        onChange={handleChange}
+      />
       {error.edad.length != 0 ? <label>{error.edad}</label> : <></>}
       <label>Sexo</label>
-        <select
-          type="text"
-          name="sexo"
-          value={user.sexo}
-          onChange={handleChange}           
-        >
-          <option selected disabled>Seleccione su genero</option>
-          <option>Masculino</option>
-          <option>Femenino</option>
-        </select>
+      <select
+        name="sexo" 
+        value={user.sexo} 
+        onChange={handleChange}
+      >
+        <option value="">Seleccione una opcion</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+      </select>
+
       {error.sexo.length != 0 ? <label>{error.sexo}</label> : <></>}
-      <label>email</label>
-      <input
-        type="email"
+      <label>Email</label>
+      <input 
+        type="text" 
         name="email"
         value={user.email}
         onChange={handleChange}
-       />
+      />
       {error.email.length != 0 ? <label>{error.email}</label> : <></>}
-      <button type="Submit">Enviar</button>
+      <button>Enviar</button>
+      <button type="button" onClick={limpiarFormulario}>
+        Limpiar Formulario</button>
+      {submittedUsers ? <label>{submittedUsers.datosEnviados}</label> : <></>}
+      {mensajeError ? <label>{mensajeError.mensajeError}</label> : <></>}
     </form>
   );
 }
 
 export default App
+
+/*datosEnviados:
+        user.nombre.length != 0
+        & error.nombre.length == 0
+         & user.apellido.length != 0
+          & error.apellido.length == 0
+           & user.edad.length != 0
+            & error.edad.length == 0
+             & user.sexo.length != 0
+              & error.sexo.length == 0
+               ? "Datos Enviados:" + user.nombre + user.apellido + user.edad + user.sexo
+                : "" */

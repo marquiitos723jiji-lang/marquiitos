@@ -1,0 +1,1 @@
+La función handleChange es la encargada de actualizar el estado del formulario en tiempo real cada vez que escribes o modificas algo en cualquiera de los inputs.

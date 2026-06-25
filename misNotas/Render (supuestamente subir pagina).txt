@@ -1,0 +1,5 @@
+Creo que se sebe la pagina con render
+
+Conectamos Render a nuestro  repositorio de github, el repositorio, solo tiene  que tener nuestro proyecto de vite, no podemos poner el repositorio con todas las
+clases y aparte el proyecto de vite ynque te levante el de vite.  y cada comit o cambio que  se haga, Render lo resube.
+
