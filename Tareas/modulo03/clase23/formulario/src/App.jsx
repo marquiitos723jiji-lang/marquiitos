@@ -75,7 +75,6 @@ function App() {
   function manejarSubmit(event) {
     validarFormulario();
     mostrarDatosEnPantalla();
-    mensajeDeError();
     event.preventDefault();
   }
 
@@ -93,22 +92,11 @@ function App() {
                & user.email.length != 0
                 & error.email.length == 0
                  ? "Tu Formulario se envio exitosamente " + " Nombre: " + user.nombre + " Apellido: " + user.apellido + " Edad: " + user.edad + " " + " Sexo: " + user.sexo
-                  : ""
+                  : "!Error!, Verifique los campos antes de Enviar"
     })
   }
 
-  function mensajeDeError(){
-    setMensajeError({
-     mensajeError:
-      error.nombre.length != 0
-       || error.apellido.length != 0
-        || error.edad.length != 0
-         || error.sexo.length != 0
-          || error.email.length != 0
-           ? "!ERROR! Por favor, verifique que todos los campos sean validos o no esten vacios"
-            : ""
-    })      
-  }
+
 
   function limpiarFormulario(){
     setUser({
@@ -172,7 +160,6 @@ function App() {
       <button type="button" onClick={limpiarFormulario}>
         Limpiar Formulario</button>
       {submittedUsers ? <label>{submittedUsers.datosEnviados}</label> : <></>}
-      {mensajeError ? <label>{mensajeError.mensajeError}</label> : <></>}
     </form>
   );
 }
